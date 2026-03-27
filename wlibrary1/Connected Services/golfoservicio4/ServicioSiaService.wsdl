@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.redsia.com.mx/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioSiaService" targetNamespace="http://ws.redsia.com.mx/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="ejecuta">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:base64Binary" />
+  </message>
+  <message name="ejecutaResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <message name="vendedores2">
+    <part name="arg0" type="xsd:string" />
+  </message>
+  <message name="vendedores2Response">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="enc2">
+    <part name="arg0" type="xsd:string" />
+    <part name="arg1" type="xsd:string" />
+    <part name="arg2" type="xsd:string" />
+    <part name="arg3" type="xsd:string" />
+  </message>
+  <message name="enc2Response">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="getFile">
+    <part name="arg0" type="xsd:string" />
+  </message>
+  <message name="getFileResponse">
+    <part name="return" type="xsd:base64Binary" />
+  </message>
+  <portType name="ServicioSia">
+    <operation name="ejecuta" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://ws.redsia.com.mx/ServicioSia/ejecutaRequest" message="tns:ejecuta" />
+      <output wsam:Action="http://ws.redsia.com.mx/ServicioSia/ejecutaResponse" message="tns:ejecutaResponse" />
+    </operation>
+    <operation name="vendedores2">
+      <input wsam:Action="http://ws.redsia.com.mx/ServicioSia/vendedores2Request" message="tns:vendedores2" />
+      <output wsam:Action="http://ws.redsia.com.mx/ServicioSia/vendedores2Response" message="tns:vendedores2Response" />
+    </operation>
+    <operation name="enc2" parameterOrder="arg0 arg1 arg2 arg3">
+      <input wsam:Action="http://ws.redsia.com.mx/ServicioSia/enc2Request" message="tns:enc2" />
+      <output wsam:Action="http://ws.redsia.com.mx/ServicioSia/enc2Response" message="tns:enc2Response" />
+    </operation>
+    <operation name="getFile">
+      <input wsam:Action="http://ws.redsia.com.mx/ServicioSia/getFileRequest" message="tns:getFile" />
+      <output wsam:Action="http://ws.redsia.com.mx/ServicioSia/getFileResponse" message="tns:getFileResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioSiaPortBinding" type="tns:ServicioSia">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="ejecuta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </output>
+    </operation>
+    <operation name="vendedores2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </output>
+    </operation>
+    <operation name="enc2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </output>
+    </operation>
+    <operation name="getFile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.redsia.com.mx/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioSiaService">
+    <port name="ServicioSiaPort" binding="tns:ServicioSiaPortBinding">
+      <soap:address location="http://187.157.134.6:8080/WSSia/ServicioSia" />
+    </port>
+  </service>
+</definitions>
