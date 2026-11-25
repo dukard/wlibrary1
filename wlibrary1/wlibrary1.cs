@@ -233,42 +233,47 @@ namespace wlibrary1
 
                     if (lugaragen == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (lugaragen == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (lugaragen == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (lugaragen == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (lugaragen == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (lugaragen == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (lugaragen == "CROSSING")
+                    else if (lugaragen == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (lugaragen == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -410,6 +415,12 @@ namespace wlibrary1
                     else if (lugaragen == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if (marca == "MERCEDES BENZ") return false;
@@ -449,7 +460,7 @@ namespace wlibrary1
                     {
                         ip = 251;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='37'";
-                    }                    
+                    }
                     else if (lugaragen == "VALLE")
                     {
                         ip = 251;
@@ -586,7 +597,35 @@ namespace wlibrary1
                     if (lugaragen == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (marca == "LEAPMOTOR")
+                {
+                    if (lugaragen == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (lugaragen == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (lugaragen == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "KIA")
@@ -616,7 +655,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (lugaragen == "REYNOSA") ip = 173;
+                    else if (lugaragen == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (lugaragen == "LAREDO") ip = 78;
                     else if (lugaragen == "SANTA CATARINA")
                     {
@@ -643,8 +686,7 @@ namespace wlibrary1
                     }
                     else if (lugaragen == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (lugaragen == "P.ABASTOS")
@@ -682,23 +724,60 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (lugaragen == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES")) { segmento = "10"; ip = 33; }
-                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '4'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     if (show_minempresas(marca, lugaragen))
@@ -849,42 +928,47 @@ namespace wlibrary1
 
                     if (lugaragen == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (lugaragen == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (lugaragen == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (lugaragen == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (lugaragen == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (lugaragen == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (lugaragen == "CROSSING")
+                    else if (lugaragen == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (lugaragen == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -1016,6 +1100,12 @@ namespace wlibrary1
                     else if (lugaragen == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if (marca == "MERCEDES BENZ") return false;
@@ -1192,7 +1282,35 @@ namespace wlibrary1
                     if (lugaragen == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (marca == "LEAPMOTOR")
+                {
+                    if (lugaragen == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (lugaragen == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (lugaragen == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "KIA")
@@ -1222,7 +1340,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (lugaragen == "REYNOSA") ip = 173;
+                    else if (lugaragen == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (lugaragen == "LAREDO") ip = 78;
                     else if (lugaragen == "SANTA CATARINA")
                     {
@@ -1249,8 +1371,7 @@ namespace wlibrary1
                     }
                     else if (lugaragen == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (lugaragen == "P.ABASTOS")
@@ -1288,24 +1409,65 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (lugaragen == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES")) { segmento = "10"; ip = 33; }
-                else if ((marca == "CHEVROLET") && (lugaragen == "FIDEL VELAZQUEZ")) ip = 159;
-                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "FIDEL VELAZQUEZ"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     if (show_minempresas(marca, lugaragen))
@@ -1460,42 +1622,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -1785,7 +1952,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "KIA")
@@ -1815,7 +2010,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -1842,8 +2041,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -1880,6 +2078,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -1898,23 +2102,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     ///// esto es por que no es global el sistema y no tengo el correo del vendedor deje en comentario el código
@@ -2213,42 +2453,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -2392,7 +2637,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -2578,7 +2827,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -2595,8 +2872,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -2633,6 +2909,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -2651,23 +2933,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     ///// esto es por que no es global el sistema y no tengo el correo del vendedor deje en comentario el código
@@ -2987,42 +3305,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -3166,7 +3489,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -3352,7 +3679,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -3369,8 +3724,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -3407,6 +3761,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -3425,23 +3785,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     ///// esto es por que no es global el sistema y no tengo el correo del vendedor deje en comentario el código
@@ -3747,6 +4143,7 @@ namespace wlibrary1
             }
         }
 
+
         public bool conexion5(String marca, String lugaragen)
         {
             String filtro = "";
@@ -3762,42 +4159,47 @@ namespace wlibrary1
 
                     if (lugaragen == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (lugaragen == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (lugaragen == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (lugaragen == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (lugaragen == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (lugaragen == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (lugaragen == "CROSSING")
+                    else if (lugaragen == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (lugaragen == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -3929,6 +4331,12 @@ namespace wlibrary1
                     else if (lugaragen == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if (marca == "MERCEDES BENZ") return false;
@@ -4105,7 +4513,35 @@ namespace wlibrary1
                     if (lugaragen == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (marca == "LEAPMOTOR")
+                {
+                    if (lugaragen == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (lugaragen == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (lugaragen == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "KIA")
@@ -4135,7 +4571,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (lugaragen == "REYNOSA") ip = 173;
+                    else if (lugaragen == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (lugaragen == "LAREDO") ip = 78;
                     else if (lugaragen == "SANTA CATARINA")
                     {
@@ -4162,8 +4602,7 @@ namespace wlibrary1
                     }
                     else if (lugaragen == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (lugaragen == "P.ABASTOS")
@@ -4201,25 +4640,65 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (lugaragen == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES")) { segmento = "10"; ip = 33; }
-                else if ((marca == "CHEVROLET") && (lugaragen == "FIDEL VELAZQUEZ")) ip = 159;
-                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "FIDEL VELAZQUEZ"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (lugaragen == "CADEREYTA")) ip = 84;
-                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     //para multimarca
@@ -4337,8 +4816,9 @@ namespace wlibrary1
                             }
                             else if (marca == "FORD")
                             {
-                                if (lugaragen == "VALLE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='VALLE' order by nombre";
-                                else if (lugaragen == "VASCONCELOS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                ///if (lugaragen == "VALLE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='VALLE' order by nombre";
+                                ///else if (lugaragen == "VASCONCELOS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
                             }
                             else if (marca == "FIAT")
                             {
@@ -4350,24 +4830,772 @@ namespace wlibrary1
                             else if ((marca == "ALFA ROMEO") && (lugaragen == "CONTRY")) sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
                             else if (marca == "CHEVROLET")
                             {
-                                if (lugaragen == "TLALPAN") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "LAS BOMBAS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "RUIZ CORTINES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "NOGALAR") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "CONCORDIA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "LAS TORRES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='LAS TORRES' order by nombre";
-                                else if (lugaragen == "CADEREYTA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMCORTO)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                if (lugaragen == "TLALPAN") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' order by nombre";
+                                else if (lugaragen == "LAS BOMBAS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "RUIZ CORTINES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "NOGALAR") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "CONCORDIA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "LAS TORRES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3' order by nombre";
+                                else if (lugaragen == "CADEREYTA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMCORTO)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
                                 //else if (lugaragen == "ALLENDE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "ALLENDE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMCORTO)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
-                                else if (lugaragen == "UNIVERSIDAD") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                else if (lugaragen == "ALLENDE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMCORTO)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "UNIVERSIDAD") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' order by nombre";
                                 //else if (lugaragen == "FIDEL VELAZQUEZ") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID=3 and AGEN_IDAGENCIA=6 order by nombre";
-                                else if (lugaragen == "FIDEL VELAZQUEZ") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                else if (lugaragen == "FIDEL VELAZQUEZ") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "ALIANZA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11' order by nombre";
                             }
                             else if (marca == "NISSAN")
                             {
                                 if (lugaragen == "SAN JERONIMO") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='CARONE SANJE' and EMPR_EMPRESAID=4 and AGEN_IDAGENCIA=1 order by nombre";
                                 else if (lugaragen == "LAS AGUILAS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID=4 and AGEN_IDAGENCIA=3 order by nombre";
-                                else sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                else sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+
+
+                                OracleCommand cmd = new OracleCommand(sql1, cnx);
+                            OracleDataAdapter Da = new OracleDataAdapter(cmd);
+                            dt = new DataTable();
+                            Da.Fill(dt);
+                            cnx.Close();
+                            cnx.Dispose();
+                            cnx = null;
+                            cmd.Dispose();
+                            cmd = null;
+                            Da.Dispose();
+                            Da = null;
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            error = "Error: Excepción1 " + ex.ToString();
+                            cnx.Close();
+                            cnx.Dispose();
+                            cnx = null;
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        error = "Error: No Abrió";
+                        return false;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                error = ex.ToString();
+                return false;
+            }
+        }
+
+
+        public bool conexion51(String marca, String lugaragen)
+        {
+            String filtro = "";
+            int ip = 0;
+
+            sistema_global = true;
+
+            try
+            {
+                if (marca == "NISSAN")
+                {
+                    segmento = "10";
+
+                    if (lugaragen == "SAN JERONIMO")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "SAN JERONIMO LAREDO")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
+                    }
+                    else if (lugaragen == "LAS AGUILAS")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
+                    }
+                    else if (lugaragen == "TLALPAN")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
+                    }
+                    else if (lugaragen == "TLALPAN LAREDO")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
+                    }
+                    else if (lugaragen == "LA JOYA")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
+                    }
+                    else if (lugaragen == "LA JOYA CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
+                    }
+                    else if (lugaragen == "LA JOYA LAREDO")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
+                    }
+                    else
+                    {
+                        return true;
+                        /***  no tengo webservice para los datos del cliente en forma de lista solo de uno en uno
+                       String cambio2;
+
+                        if ((lugaragen == "MANTE") || (lugaragen == "VALLES"))
+                        {   
+                            golfoservicio2.ServicioSiaClient cliente2 = new golfoservicio2.ServicioSiaClient();
+                            lanissan = cliente2.enc2(quien, marca, lugaragen, data);
+                            return true;
+                        }
+                        else if ((lugaragen == "TUXPAN") || (lugaragen == "POZA RICA"))
+                        {
+                            if (lugaragen == "POZA RICA") cambio2 = "POZA";
+                            else cambio2 = lugaragen;
+
+                            golfoservicio4.ServicioSiaClient cliente4 = new golfoservicio4.ServicioSiaClient();
+                            lanissan = cliente4.enc2(quien, marca, cambio2, data);
+                            return true;
+                        }
+                       **********/
+                    }
+                }
+                else if (marca == "JETOUR")
+                {
+                    segmento = "10";
+
+                    if (lugaragen == "SALTILLO")
+                    {
+                        ip = 3;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='20'";
+                    }
+                    else if (lugaragen == "LAS TORRES")
+                    {
+                        ip = 3;
+                        filtro = " and EMPR_EMPRESAID='21' and AGEN_IDAGENCIA='21'";
+                    }
+                    else if (lugaragen == "LAS TORRES LAREDO")
+                    {
+                        ip = 3;
+                        filtro = " and EMPR_EMPRESAID='21' and AGEN_IDAGENCIA='28'";
+                    }
+                }
+                else if (marca == "GEELY")
+                {
+                    segmento = "10";
+
+                    if (lugaragen == "SENDERO")
+                    {
+                        ip = 13;
+                        filtro = " and EMPR_EMPRESAID='18' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 13;
+                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "CONTRY")
+                    {
+                        ip = 13;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='5'";
+                    }
+                    else if (lugaragen == "CONCORDIA")
+                    {
+                        ip = 13;
+                        filtro = " and EMPR_EMPRESAID='18' and AGEN_IDAGENCIA='7'";
+                    }
+                }
+                else if (marca == "GREAT WALL")
+                {
+                    segmento = "10";
+
+                    if (lugaragen == "SENDERO")
+                    {
+                        ip = 16;
+                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "SENDERO FRONTERA")
+                    {
+                        ip = 16;
+                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='4'";
+                    }
+                    else if (lugaragen == "GONZALITOS")
+                    {
+                        ip = 16;
+                        filtro = " and EMPR_EMPRESAID='18' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "GONZALITOS FRONTERA")
+                    {
+                        ip = 16;
+                        filtro = " and EMPR_EMPRESAID='18' and AGEN_IDAGENCIA='3'";
+                    }
+                }
+                else if (marca == "OMODA")
+                {
+                    segmento = "10";
+
+                    if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='16' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "GONZALITOS")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='17' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "GONZALITOS LAREDO")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='17' and AGEN_IDAGENCIA='3'";
+                    }
+                }
+                else if (marca == "FORD")
+                {
+                    if (lugaragen == "VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "VALLE LAREDO")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='3'";
+                    }
+                    else if (lugaragen == "VASCONCELOS")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "CALZADA DEL VALLE")                        
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
+                    }
+                }
+                else if (marca == "MERCEDES BENZ") return false;
+                else if (marca == "MG")
+                {
+                    if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='10'";
+                    }
+                    else if (lugaragen == "LINDA VISTA LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='29'";
+                    }
+                    else if (lugaragen == "CONSTITUYENTES")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='31'";
+                    }
+                    else if (lugaragen == "CONSTITUYENTES LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='40'";
+                    }
+                    else if (lugaragen == "LAS TORRES")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='9'";
+                    }
+                    else if (lugaragen == "LAS TORRES LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='33'";
+                    }
+                    else if (lugaragen == "TEC")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='37'";
+                    }
+                    else if (lugaragen == "VALLE")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='11'";
+                    }
+                    else if (lugaragen == "VALLE LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='38'";
+                    }
+                    else if (lugaragen == "JURIQUILLA")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='13' and AGEN_IDAGENCIA='23'";
+                    }
+                    else if (lugaragen == "JURIQUILLA LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='13' and AGEN_IDAGENCIA='39'";
+                    }
+                    else if (lugaragen == "LOMAS VERDES")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='8' and AGEN_IDAGENCIA='14'";
+                    }
+                    else if (lugaragen == "LOMAS VERDES LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='8' and AGEN_IDAGENCIA='34'";
+                    }
+                    else if (lugaragen == "TIJUANA")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='11' and AGEN_IDAGENCIA='19'";
+                    }
+                    else if (lugaragen == "TIJUANA SUCURSAL")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='11' and AGEN_IDAGENCIA='17'";
+                    }
+                    else if (lugaragen == "CORREGIDORA")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='12'";
+                    }
+                    else if (lugaragen == "CORREGIDORA LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='30'";
+                    }
+                    else if (lugaragen == "QUERETARO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='13'";
+                    }
+                    else if (lugaragen == "LOPEZ MATEOS")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='10' and AGEN_IDAGENCIA='16'";
+                    }
+                    else if (lugaragen == "LOPEZ MATEOS LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='10' and AGEN_IDAGENCIA='35'";
+                    }
+                    else if (lugaragen == "LAREDO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='9' and AGEN_IDAGENCIA='15'";
+                    }
+                    else if (lugaragen == "MEXICALI")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='12' and AGEN_IDAGENCIA='18'";
+                    }
+                    else if (lugaragen == "LINARES")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='26'";
+                    }
+                    else if (lugaragen == "TOREO")
+                    {
+                        ip = 251;
+                        filtro = " and EMPR_EMPRESAID='14' and AGEN_IDAGENCIA='41'";
+                    }
+                }
+                else if (marca == "CHIREY")
+                {
+                    if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='13' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "LINDA VISTA LAREDO")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='13' and AGEN_IDAGENCIA='7'";
+                    }
+                    //////else if (lugaragen == "FLETEROS")
+                    else if (lugaragen == "GONZALITOS")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='14' and AGEN_IDAGENCIA='2'";
+                    }
+                    /////else if (lugaragen == "FLETEROS LAREDO")
+                    else if (lugaragen == "GONZALITOS LAREDO")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='14' and AGEN_IDAGENCIA='5'";
+                    }
+                    else if (lugaragen == "CORREGIDORA")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='15' and AGEN_IDAGENCIA='3'";
+                    }
+                    else if (lugaragen == "CORREGIDORA LAREDO")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='15' and AGEN_IDAGENCIA='6'";
+                    }
+                    else if (lugaragen == "JURIQUILLA")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='16' and AGEN_IDAGENCIA='4'";
+                    }
+                    else if (lugaragen == "JURIQUILLA LAREDO")
+                    {
+                        ip = 253;
+                        filtro = " and EMPR_EMPRESAID='16' and AGEN_IDAGENCIA='8'";
+                    }
+                }
+                else if (marca == "CHANGAN")
+                {
+                    segmento = "10";
+
+                    if (lugaragen == "CORREGIDORA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (marca == "LEAPMOTOR")
+                {
+                    if (lugaragen == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (lugaragen == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (lugaragen == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
+                    }
+                }
+                else if (marca == "KIA")
+                {
+                    if (lugaragen == "GONZALITOS")
+                    {
+                        ip = 88;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (lugaragen == "GONZALITOS FRONTERA")
+                    {
+                        ip = 88;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='7'";
+                    }
+                    else if (lugaragen == "FLETEROS")
+                    {
+                        ip = 88;
+                        filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='9'";
+                    }
+                    else if (lugaragen == "LINDA VISTA")
+                    {
+                        ip = 41;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (lugaragen == "LINDA VISTA FRONTERA")
+                    {
+                        ip = 41;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
+                    }
+                    else if (lugaragen == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
+                    else if (lugaragen == "LAREDO") ip = 78;
+                    else if (lugaragen == "SANTA CATARINA")
+                    {
+                        ip = 88;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='5'";
+                    }
+                    else if (lugaragen == "LA FE")
+                    {
+                        ip = 41;
+                        filtro = " and EMPR_EMPRESAID='11' and AGEN_IDAGENCIA='11'";
+                    }
+                }
+                else if (marca == "CHRYSLER")
+                {
+                    if (lugaragen == "CUMBRES")
+                    {
+                        ip = 75;
+                    }
+                    else if (lugaragen == "SANTA LUCIA")
+                    {
+                        segmento = "11";
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='3'";
+                    }
+                    else if (lugaragen == "SANTA LUCIA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
+                    }
+                    else if (lugaragen == "P.ABASTOS")
+                    {
+                        ip = 79;
+                    }
+                    else if (lugaragen == "LINARES")
+                    {
+                        ip = 79;
+                    }
+                    else if (lugaragen == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
+                    }
+                    else if (lugaragen == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='36'";
+                    }
+                }
+                else if ((marca == "FIAT") && (lugaragen == "CUMBRES")) ip = 75;
+                else if (marca == "MITSUBISHI")
+                {
+                    if (lugaragen == "SANTA LUCIA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID = '14' and AGEN_IDAGENCIA = '4' and AGEN_NOMAGENCIA = 'CARONEMOTORS'";
+                    }
+                    else if (lugaragen == "SALTILLO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID = '16' and AGEN_IDAGENCIA = '5'";
+                        //filtro = " and EMPR_EMPRESAID = '16' and AGEN_IDAGENCIA = '5' and AGEN_NOMAGENCIA = ''";
+                    }
+                }
+                else if ((marca == "ALFA ROMEO") && (lugaragen == "CONTRY")) ip = 98;
+                else if ((marca == "CHEVROLET") && (lugaragen == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "LAS BOMBAS")) ip = 82;
+                else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "FIDEL VELAZQUEZ"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES LAREDO"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (lugaragen == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
+                else
+                {
+                    //para multimarca
+                    sistema_global = false;
+                    String sql1 = "";
+                    String dato_odbc = "";
+                    try
+                    {
+                        if ((marca == "VOLKSWAGEN") && (lugaragen == "GONZALITOS")) dato_odbc = "dsn=c1vwgonzalitos;";
+                        else if ((marca == "VOLKSWAGEN") && (lugaragen == "CONTRY")) dato_odbc = "dsn=c1vwcontry;";
+                        else if ((marca == "VOLKSWAGEN") && (lugaragen == "LINDA VISTA")) dato_odbc = "dsn=c1vwlindavista;";
+                        else if ((marca == "VOLKSWAGEN") && (lugaragen == "REYNOSA")) dato_odbc = "dsn=c1vwreynosa;";
+                        else if ((marca == "VOLKSWAGEN") && (lugaragen == "RIO BRAVO")) dato_odbc = "dsn=c1vwreynosa;";
+                        else if ((marca == "SEAT") && (lugaragen == "CONTRY")) dato_odbc = "dsn=c1vwcontry;";
+                        else if ((marca == "SEAT") && (lugaragen == "LINDA VISTA")) dato_odbc = "dsn=c1vwlindavista;";
+                        else if ((marca == "SEAT") && (lugaragen == "REYNOSA")) dato_odbc = "dsn=c1vwreynosa;";
+                        else if ((marca == "SEAT") && (lugaragen == "CONCORDIA")) dato_odbc = "dsn=c1vwlindavista;";
+                        //else if ((marca == "CHEVROLET") && (lugaragen == "ALLENDE")) dato_odbc = "dsn=c1chlastorres;";
+                        //else if ((marca == "CHEVROLET") && (lugaragen == "LAS TORRES")) dato_odbc = "dsn=c1chlastorres;";
+                        //else if ((marca == "CHEVROLET") && (lugaragen == "NOGALAR")) dato_odbc = "dsn=c1chruizcortines;";
+                        //else if ((marca == "CHEVROLET") && (lugaragen == "RUIZ CORTINEZ")) dato_odbc = "dsn=c1chruizcortines;";
+                        else if ((marca == "CHEVROLET") && (lugaragen == "UNIVERSIDAD")) dato_odbc = "dsn=c1chuniversidad;";
+                        conn = new OdbcConnection();
+                        conn.ConnectionString = dato_odbc;
+                        conn.Open();
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            /*sql1 = "SELECT C15.ID,C15.NOMBRE_VISIBLE,C15.FECHA_ALTA,C15.APELLIDO_PRIMERO,C15.APELLIDO_SEGUNDO,C15.NOMBRES,C15.CODIGO_FISCAL,";
+                            sql1 += "C15.RAZON_SOCIAL,C15.PERSONA_FISICA,C15.COMPONER_NOMBRE_VISIBLE,C15.NO_ENCUESTAR,C15.NO_CORREO_MASIVO,C15.NO_SMS_MASIVO,";
+                            sql1 += "extract (year from c15.FECHA_ALTA)||'-'||RIGHT('00'||extract (month from c15.FECHA_ALTA),2)||'-'||RIGHT('00'||extract (Day from c15.FECHA_ALTA),2) as FechaAlta,";
+                            sql1 += "' 'AS FechaBaja from comercial C14 LEFT JOIN ente C15 ON C15.ID = C14.id_ente";*/
+
+                            sql1 = "SELECT C15.ID,C15.APELLIDO_PRIMERO || ' ' || C15.APELLIDO_SEGUNDO || ' ' || C15.NOMBRES nombre,C15.NO_CORREO_MASIVO from comercial C14 LEFT JOIN ente C15 ON C15.ID = C14.id_ente where C14.vigente='T'";
+
+                            // ARREGLO QUE NO JALO VUELVO AL ANTERIOR
+                            //sql1 = "select C14.codigo,C15.NOMBRE_VISIBLE,C15.NO_CORREO_MASIVO from comercial C14 LEFT JOIN ente C15 ON C15.ID = C14.id_ente where C14.vigente='T'";
+
+                            OdbcCommand sqlCmd = new OdbcCommand(sql1, conn);
+                            OdbcDataAdapter sqlDa = new OdbcDataAdapter(sqlCmd);
+                            dt = new DataTable();
+                            sqlDa.Fill(dt);
+                            conn.Close();
+                            conn.Dispose();
+                            conn = null;
+                            sqlCmd.Dispose();
+                            sqlCmd = null;
+                            sqlDa.Dispose();
+                            sqlDa = null;
+                            return true;
+                        }
+                        else return false;
+                    }
+                    catch (Exception ex)
+                    {
+                        error = "Error: " + ex.ToString();
+                        if (conn.State == ConnectionState.Open) conn.Close();
+                        conn.Dispose();
+                        conn = null;
+                        return false;
+                    }
+                }
+
+                if (ip > 0)
+                {
+                    if (conectar2(ip))
+                    {
+                        try
+                        {
+                            // and AGEN_NOMAGENCIA='CUMBRES'
+                            String sql1 = "";
+
+                            if (marca == "KIA")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "MG")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "CHIREY")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "CHANGAN")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "JETOUR")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "GEELY")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "GREAT WALL")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "OMODA")
+                            {
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "CHRYSLER")
+                            {
+                                if (lugaragen == "CUMBRES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID='2' and AGEN_NOMAGENCIA='CUMBRES' order by nombre";
+                                else if (lugaragen == "SANTA LUCIA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " and AGEN_NOMAGENCIA='STALUCIA' order by nombre";
+                                else if (lugaragen == "P.ABASTOS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID='3' and AGEN_NOMAGENCIA='STALUCIA' order by nombre";
+                                else if (lugaragen == "LINARES") sql1 = "";
+                                else if (lugaragen == "CONTRY") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                            }
+                            else if (marca == "FORD")
+                            {
+                                /////if (lugaragen == "VALLE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='VALLE' order by nombre";
+                                /////else if (lugaragen == "VASCONCELOS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                                sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "FIAT")
+                            {
+                                if (lugaragen == "CUMBRES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID='2' and AGEN_NOMAGENCIA='FIAT' order by nombre";
+                                else if (lugaragen == "SANTA LUCIA") sql1 = "";
+                            }
+                            else if ((marca == "MITSUBISHI") && (lugaragen == "SANTA LUCIA")) sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID='14' and AGEN_IDAGENCIA='4' order by nombre";
+                            else if ((marca == "MITSUBISHI") && (lugaragen == "SALTILLO")) sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID='16' and AGEN_IDAGENCIA='5' order by nombre";
+                            else if ((marca == "ALFA ROMEO") && (lugaragen == "CONTRY")) sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' order by nombre";
+                            else if (marca == "CHEVROLET")
+                            {
+                                if (lugaragen == "TLALPAN") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "LAS BOMBAS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "RUIZ CORTINES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "NOGALAR") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "CONCORDIA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "LAS TORRES") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='LAS TORRES' order by nombre";
+                                else if (lugaragen == "CADEREYTA") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMCORTO)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "ALLENDE") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMCORTO)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "UNIVERSIDAD") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else if (lugaragen == "FIDEL VELAZQUEZ") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                                else sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
+                            }
+                            else if (marca == "NISSAN")
+                            {
+                                if (lugaragen == "SAN JERONIMO") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and AGEN_NOMAGENCIA='CARONE SANJE' and EMPR_EMPRESAID=4 and AGEN_IDAGENCIA=1 order by nombre";
+                                else if (lugaragen == "LAS AGUILAS") sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC' and EMPR_EMPRESAID=4 and AGEN_IDAGENCIA=3 order by nombre";
+                                else sql1 = "SELECT VEND_CLAVE,(trim(VEND_APELLIDOPATERNO) || ' ' || trim(VEND_APELLIDOMATERNO) || ' ' || trim(VEND_NOMBRE)) nombre,VEND_EMAIL Email FROM AUTOS.vt_vvendedores where VEND_STATUS='AC'" + filtro + " order by nombre";
                             }
                             
 
@@ -4428,42 +5656,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -4607,7 +5840,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -4793,7 +6030,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -4810,8 +6075,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -4848,6 +6112,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -4866,23 +6136,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     ///// esto es por que no es global el sistema y no tengo el correo del vendedor deje en comentario el código
@@ -5171,42 +6477,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -5350,7 +6661,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -5536,7 +6851,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -5553,8 +6896,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -5591,6 +6933,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -5609,23 +6957,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     ///// esto es por que no es global el sistema y no tengo el correo del vendedor deje en comentario el código
@@ -5904,42 +7288,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -6083,7 +7472,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -6269,7 +7662,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -6286,8 +7707,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -6324,6 +7744,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -6342,23 +7768,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     ///// esto es por que no es global el sistema y no tengo el correo del vendedor deje en comentario el código
@@ -6510,42 +7972,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -6689,7 +8156,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -6875,7 +8346,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -6892,8 +8391,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -6930,6 +8428,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -6949,23 +8453,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     if (show_minempresas(marca, agencia))
@@ -7252,42 +8792,47 @@ namespace wlibrary1
 
                     if (agencia == "SAN JERONIMO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='1'";
                     }
                     else if (agencia == "SAN JERONIMO LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "SANJE CROSSING")
+                    {
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LAS AGUILAS")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='3'";
                     }
                     else if (agencia == "TLALPAN")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='4'";
                     }
                     else if (agencia == "TLALPAN LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='5' and AGEN_IDAGENCIA='5'";
                     }
                     else if (agencia == "LA JOYA")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "CROSSING")
+                    else if (agencia == "LA JOYA CROSSING")
                     {
-                        ip = 85;
-                        filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='7'";
+                        ip = 117;
+                        filtro = " and EMPR_EMPRESAID='4' and AGEN_IDAGENCIA='9'";
                     }
                     else if (agencia == "LA JOYA LAREDO")
                     {
-                        ip = 85;
+                        ip = 117;
                         filtro = " and EMPR_EMPRESAID='6' and AGEN_IDAGENCIA='8'";
                     }
                     else
@@ -7431,7 +8976,11 @@ namespace wlibrary1
                         ip = 41;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='6'";
                     }
-                    else if (agencia == "REYNOSA") ip = 173;
+                    else if (agencia == "REYNOSA")
+                    {
+                        segmento = "10";
+                        ip = 116;
+                    }
                     else if (agencia == "LAREDO") ip = 78;
                     else if (agencia == "SANTA CATARINA")
                     {
@@ -7617,7 +9166,35 @@ namespace wlibrary1
                     if (agencia == "CORREGIDORA")
                     {
                         ip = 5;
-                        filtro = " and EMPR_EMPRESAID='19' and AGEN_IDAGENCIA='5'";
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='1'";
+                    }
+                    else if (agencia == "CORREGIDORA FRONTERA")
+                    {
+                        ip = 5;
+                        filtro = " and EMPR_EMPRESAID='20' and AGEN_IDAGENCIA='2'";
+                    }
+                }
+                else if (agencia == "LEAPMOTOR")
+                {
+                    if (agencia == "CONTRY")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='47'";
+                    }
+                    else if (agencia == "CONTRY LAREDO")
+                    {
+                        ip = 98;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='48'";
+                    }
+                    else if (agencia == "LINDA VISTA")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='45'";
+                    }
+                    else if (agencia == "LINDA VISTA LAREDO")
+                    {
+                        ip = 79;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='49'";
                     }
                 }
                 else if (marca == "CHRYSLER")
@@ -7634,8 +9211,7 @@ namespace wlibrary1
                     }
                     else if (agencia == "SANTA LUCIA LAREDO")
                     {
-                        segmento = "10";
-                        ip = 27;
+                        ip = 79;
                         filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='32'";
                     }
                     else if (agencia == "P.ABASTOS")
@@ -7672,6 +9248,12 @@ namespace wlibrary1
                     else if (agencia == "VASCONCELOS")
                     {
                         ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='2'";
+                    }
+                    else if (agencia == "CALZADA DEL VALLE")
+                    {
+                        ip = 164;
+                        filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='4'";
                     }
                 }
                 else if ((marca == "FIAT") && (agencia == "CUMBRES")) ip = 75;
@@ -7691,23 +9273,59 @@ namespace wlibrary1
                     }
                 }
                 else if ((marca == "ALFA ROMEO") && (agencia == "CONTRY")) ip = 98;
-                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN")) ip = 38;
+                else if ((marca == "CHEVROLET") && (agencia == "TLALPAN"))
+                {
+                    segmento = "10";
+                    ip = 109;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1' ";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS BOMBAS")) ip = 82;
-                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES")) ip = 159;
-                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR")) ip = 160;
-                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "RUIZ CORTINES"))
+                {
+                    segmento = "10";
+                    ip = 33;
+                    filtro = " and EMPR_EMPRESAID='3' and AGEN_IDAGENCIA='5'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "NOGALAR"))
+                {
+                    segmento = "10";
+                    ip = 115;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "CONCORDIA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '2'";
+                }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '3'";
                 }
                 else if ((marca == "CHEVROLET") && (agencia == "LAS TORRES LAREDO"))
                 {
-                    ip = 84;
+                    segmento = "10";
+                    ip = 118;
                     filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '8'";
                 }
-                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE")) ip = 84;
-                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD")) ip = 46;
+                else if ((marca == "CHEVROLET") && (agencia == "ALLENDE"))
+                {
+                    segmento = "10";
+                    ip = 118;
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "UNIVERSIDAD"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '1'";
+                }
+                else if ((marca == "CHEVROLET") && (agencia == "ALIANZA"))
+                {
+                    segmento = "10";
+                    ip = 119;
+                    filtro = " and EMPR_EMPRESAID = '3' and AGEN_IDAGENCIA = '11'";
+                }
                 else
                 {
                     if (show_minempresas(marca, agencia))
@@ -9115,6 +10733,29 @@ namespace wlibrary1
                 return ex.ToString();
             }
         }
+
+
+
+        /*
+         select EMPR_EMPRESAID,AGEN_IDAGENCIA,MARC_DESCRIP,AGEN_NOMAGENCIA from AUTOS.VT_VLIBRODEVENTAS
+
+19	5	CHANGAN	CORREGIDORA
+16	1	JAECOO	LINDA VISTA
+17	2	OMODA	GONZALITOS
+17	3	CHIREY	LAREDO
+17	2	CHIREY	GONZALITOS
+20	1	DEEPAL	CORREGIDORA
+17	2	FORD	GONZALITOS
+16	1	OMODA	LINDA VISTA
+17	3	OMODA	LAREDO
+17	2	SEAT	GONZALITOS
+17	2	MG	GONZALITOS
+16	1	CHIREY	LINDA VISTA
+17	2	JAECOO	GONZALITOS
+17	2	KIA	GONZALITOS
+17	2	VOLKSWAGEN	GONZALITOS
+17	2	HYUNDAI	GONZALITOS
+         */
 
 
 
